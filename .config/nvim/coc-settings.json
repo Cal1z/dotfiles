@@ -1,0 +1,13 @@
+{
+    "snippets.ultisnips.directories": [
+        "~/.config/Code/User/snippets"
+    ],
+
+    "python.linting.enabled":true,
+    "python.linting.pylintEnabled":true,
+    "python.formatting.provider": "black",
+    "coc.preferences.formatOnSaveFiletypes": ["python"],
+    "markdownlint.config": {
+        "line-length": false
+    }
+}
