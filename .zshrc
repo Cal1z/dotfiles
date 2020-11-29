@@ -73,3 +73,5 @@ function watchfolder {
 }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias config='/usr/bin/git --git-dir=/home/marvin/.cfg/ --work-tree=/home/marvin'
+alias nikto='perl ~/.tools/nikto/program/nikto.pl'
+alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:1.10.0'
