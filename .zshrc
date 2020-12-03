@@ -36,7 +36,6 @@ alias d='dirs -v | head -4'
 alias 1='cd -'
 alias 2='cd -2'
 alias 3='cd -3'
-alias 4='cd -4'
 alias msf='/usr/local/bin/msfconsole'
 alias cat='bat --pager=never'
 alias less='bat'
@@ -45,9 +44,9 @@ alias ff='xdg-open "$(fzf)"'
 alias la='ls -a'
 alias thm='sudo openvpn ~/tryhackme/mm4rks.ovpn'
 alias fkie='~/0xff/tmux.sh'
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux new-session -A -s main
-# fi
+alias config='/usr/bin/git --git-dir=/home/marvin/.cfg/ --work-tree=/home/marvin'
+alias nikto='perl ~/.tools/nikto/program/nikto.pl'
+alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:1.10.0'
 function ts {
   args=$@
   tmux send-keys -t right "$args" C-m
@@ -72,6 +71,3 @@ function watchfolder {
   fi
 }
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-alias config='/usr/bin/git --git-dir=/home/marvin/.cfg/ --work-tree=/home/marvin'
-alias nikto='perl ~/.tools/nikto/program/nikto.pl'
-alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:1.10.0'
