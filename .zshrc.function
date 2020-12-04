@@ -1,0 +1,23 @@
+function ts {
+  args=$@
+  tmux send-keys -t right "$args" C-m
+}
+function pycov {
+    if [ $# -eq 2 ]; then
+      # 1st argument test folder, second module
+      pytest --cov-report=html --cov=$argv[2] $argv[1]
+    else
+      echo "Usage: ${FUNCNAME[0]} <test folder> <module>"
+    fi
+}
+function watchfolder {
+  if [ $# -ge 2 ]; then
+    echo "[+] watching folder $argv[1]: ${@:2}"
+    inotifywait -q -m -e close_write -r $argv[1] --exclude \[0-9\]+ |
+      while read; do
+        ${@:2}
+      done
+  else
+    echo "Usage: ${FUNCNAME[0]} <folder> <command>"
+  fi
+}
