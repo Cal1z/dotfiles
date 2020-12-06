@@ -1,4 +1,8 @@
 export PATH=/home/marvin/.local/bin:$PATH
+export PATH=$PATH:/home/marvin/.tools/john/run
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin

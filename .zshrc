@@ -16,6 +16,7 @@ SAVEHIST=10000
 PROMPT=" %B%(?.%F{251}.%F{red})$%f%b "
 RPROMPT=" %F{blue}%~%f "
 DIRSTACKSIZE=8
+setopt GLOB_DOTS
 setopt autocd autopushd extendedglob notify
 setopt pushdminus pushdsilent pushdtohome pushdignoredups
 setopt HIST_IGNORE_DUPS
@@ -23,7 +24,9 @@ setopt SHARE_HISTORY
 bindkey -e
 bindkey '^R' history-incremental-search-backward
 bindkey "^X^E" edit-command-line
-source ~/.zshrc.alias
 source ~/.zshrc.export
 source ~/.zshrc.function
+source ~/.zshrc.alias
+source ~/.tools/gf/gf-completion.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ] && source ~/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh

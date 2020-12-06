@@ -21,3 +21,11 @@ function watchfolder {
     echo "Usage: ${FUNCNAME[0]} <folder> <command>"
   fi
 }
+function notes {
+  notesFile="$HOME/notes/notes.md"
+  if [ ! -f $notesFile ]; then
+    touch $notesFile
+  fi
+  nvim -c "norm Go" \
+    -c "startinsert" $notesFile
+}

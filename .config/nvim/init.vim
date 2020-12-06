@@ -78,6 +78,7 @@ if executable('rg')
 endif
 
 let loaded_matchparen = 1
+let loaded_matchit = 1
 let mapleader = " "
 
 
