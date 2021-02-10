@@ -29,3 +29,7 @@ function notes {
   nvim -c "norm Go" \
     -c "startinsert" $notesFile
 }
+function dockershellhere() {
+    dirname=${PWD##*/}
+    docker run --rm -it --entrypoint=/bin/bash -v `pwd`:/${dirname} -w /${dirname} "$@"
+}

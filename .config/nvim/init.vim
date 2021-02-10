@@ -222,3 +222,6 @@ autocmd BufWritePre * :call TrimWhitespace()
 
 " send python execution to right tmux pane
  " autocmd FileType python map <F5> :!ts python3 % <CR><CR>
+
+" Consider all .yar/.yara files to be YARA files.
+autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
